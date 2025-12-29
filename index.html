@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Screen Services | OverTop Screen</title>
+  <meta name="description" content="Explore all OverTop Screen services, from lanai and pool screen repair to porch and patio screen installation. Clear explanations, clean work, and dependable results." />
+
+  <style>
+    :root{
+      --ink:#081022;
+      --muted:#4b5563;
+      --bg:#f3f6ff;
+      --card:#ffffff;
+      --line:rgba(8,16,34,.10);
+      --sky:#38bdf8;
+      --navy:#0b2a5c;
+      --mint:#2dd4bf;
+      --violet:#8b5cf6;
+      --sun:#fbbf24;
+      --shadow: 0 22px 60px rgba(2,6,23,.12);
+      --radius: 26px;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.9;
+    }
+
+    a{color:inherit}
+    .wrap{max-width:1180px; margin:0 auto; padding:0 18px}
+    section{padding:78px 0}
+    h2{
+      margin:0 0 14px;
+      font-size:34px;
+      letter-spacing:-.35px;
+    }
+    h3{
+      margin:0 0 10px;
+      font-size:20px;
+      letter-spacing:-.2px;
+    }
+    p{margin:0 0 14px}
+    .lead{
+      color: var(--muted);
+      font-size:16px;
+      margin: 0 0 18px;
+      max-width: 82ch;
+    }
+
+    /* Hero */
+    header.hero{
+      padding:92px 0 82px;
+      color:#fff;
+      background:
+        radial-gradient(900px 520px at 16% 18%, rgba(45,212,191,.44), transparent 60%),
+        radial-gradient(900px 520px at 88% 22%, rgba(56,189,248,.45), transparent 60%),
+        radial-gradient(900px 520px at 58% 92%, rgba(139,92,246,.26), transparent 60%),
+        linear-gradient(180deg, #06152e 0%, #072448 55%, #07113a 100%);
+      position:relative;
+      overflow:hidden;
+    }
+
+    header.hero:before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background:
+        radial-gradient(circle at 22% 28%, rgba(255,255,255,.08), transparent 42%),
+        radial-gradient(circle at 80% 16%, rgba(255,255,255,.06), transparent 44%),
+        linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(255,255,255,.045) 1px, transparent 1px);
+      background-size: auto, auto, 52px 52px, 52px 52px;
+      opacity:.55;
+      pointer-events:none;
+    }
+
+    .topbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      padding-bottom: 28px;
+      position:relative;
+      z-index:2;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:900;
+      letter-spacing:.3px;
+    }
+    .logo{
+      width:50px;
+      height:50px;
+      border-radius:18px;
+      background:
+        radial-gradient(circle at 30% 35%, rgba(56,189,248,1), rgba(45,212,191,.95)),
+        linear-gradient(180deg, rgba(255,255,255,.25), rgba(255,255,255,0));
+      box-shadow: 0 14px 38px rgba(0,0,0,.26);
+    }
+
+    nav.quick{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      justify-content:flex-end;
+    }
+
+    .chip{
+      text-decoration:none;
+      font-size:14px;
+      padding:10px 12px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.07);
+      color: rgba(255,255,255,.92);
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.12fr .88fr;
+      gap: 22px;
+      align-items: stretch;
+      position:relative;
+      z-index:2;
+    }
+
+    .hero h1{
+      margin:0 0 14px;
+      font-size:52px;
+      line-height:1.10;
+      letter-spacing:-.9px;
+    }
+    .hero p{
+      margin:0 0 16px;
+      color: rgba(255,255,255,.90);
+      max-width: 78ch;
+      font-size: 16.5px;
+    }
+
+    .btn-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top: 16px;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      text-decoration:none;
+      font-weight:900;
+      padding: 12px 16px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.16);
+      box-shadow: 0 10px 26px rgba(0,0,0,.22);
+    }
+    .btn.primary{
+      background: linear-gradient(90deg, rgba(45,212,191,1), rgba(56,189,248,1));
+      border: none;
+      color: #041326;
+    }
+    .btn.ghost{
+      background: rgba(255,255,255,.08);
+      color: rgba(255,255,255,.94);
+    }
+
+    .hero-card{
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: 0 16px 44px rgba(0,0,0,.20);
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+    }
+
+    .hero-card h3{
+      margin:0;
+      font-size:18px;
+      letter-spacing:-.2px;
+    }
+
+    .mini{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:10px;
+    }
+
+    .tile{
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.06);
+      padding: 14px;
+    }
+    .tile strong{
+      display:block;
+      font-size:14px;
+      margin-bottom:6px;
+      color: rgba(255,255,255,.92);
+    }
+    .tile span{
+      display:block;
+      font-size:13px;
+      color: rgba(255,255,255,.84);
+    }
+
+    /* Cards and layout */
+    .card{
+      background: var(--card);
+      border-radius: var(--radius);
+      border:1px solid var(--line);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .pad{padding: 34px}
+
+    .split{
+      display:grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .soft{
+      background: linear-gradient(180deg, rgba(45,212,191,.10), rgba(56,189,248,.08));
+      border: 1px solid rgba(56,189,248,.16);
+      border-radius: var(--radius);
+      padding: 22px;
+    }
+    .soft h3{margin:0 0 10px; font-size:18px}
+    .list{
+      margin:0;
+      padding:0;
+      list-style:none;
+    }
+    .list li{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(8,16,34,.10);
+      color: var(--muted);
+    }
+    .list li:last-child{border-bottom:none}
+    .dot{
+      width:12px;
+      height:12px;
+      border-radius:4px;
+      margin-top: 7px;
+      background: linear-gradient(180deg, rgba(45,212,191,1), rgba(56,189,248,1));
+      flex: 0 0 12px;
+    }
+
+    .grid2{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 18px;
+    }
+    .feature{
+      border-radius: 18px;
+      border:1px solid var(--line);
+      background: #f8feff;
+      padding: 16px;
+    }
+    .feature strong{display:block; margin-bottom:6px}
+    .feature p{margin:0; color: var(--muted); font-size: 14px}
+
+    /* Services grid */
+    .services-grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 16px;
+    }
+    .svc{
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: #ffffff;
+      box-shadow: 0 12px 30px rgba(2,6,23,.08);
+      padding: 22px;
+      position:relative;
+      overflow:hidden;
+    }
+    .svc:before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(700px 320px at 18% 16%, rgba(56,189,248,.12), transparent 58%),
+        radial-gradient(700px 320px at 92% 22%, rgba(45,212,191,.12), transparent 58%);
+      pointer-events:none;
+    }
+    .svc > *{position:relative; z-index:1}
+    .svc p{color: var(--muted); font-size: 15px}
+    .svc a{
+      color: var(--sky);
+      font-weight: 900;
+      text-decoration:none;
+      border-bottom: 1px solid rgba(56,189,248,.35);
+    }
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-weight:900;
+      font-size: 12px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(56,189,248,.22);
+      background: rgba(56,189,248,.10);
+      color: #072248;
+      margin-bottom: 10px;
+    }
+    .spark{
+      width:10px;
+      height:10px;
+      border-radius: 4px;
+      background: linear-gradient(180deg, rgba(45,212,191,1), rgba(56,189,248,1));
+    }
+
+    .why-grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 14px;
+    }
+    .why{
+      border-radius: 18px;
+      padding: 16px;
+      border:1px solid var(--line);
+      background: #ffffff;
+      box-shadow: 0 12px 30px rgba(2,6,23,.08);
+    }
+    .why strong{display:block; margin-bottom:6px}
+    .why p{margin:0; color: var(--muted); font-size: 14px}
+
+    .loc-grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .loc{
+      border-radius: 18px;
+      padding: 16px;
+      border:1px solid var(--line);
+      background: #ffffff;
+      box-shadow: 0 12px 30px rgba(2,6,23,.08);
+    }
+    .loc a{
+      color: var(--sky);
+      font-weight: 900;
+      text-decoration:none;
+      border-bottom: 1px solid rgba(56,189,248,.35);
+    }
+    .loc p{margin:10px 0 0; color: var(--muted); font-size: 14px}
+
+    .map{
+      border-radius: 22px;
+      overflow:hidden;
+      border:1px solid var(--line);
+      box-shadow: var(--shadow);
+      background:#fff;
+    }
+
+    .cta{
+      color:#041326;
+      background:
+        radial-gradient(900px 520px at 18% 22%, rgba(45,212,191,.42), transparent 60%),
+        radial-gradient(900px 520px at 86% 24%, rgba(56,189,248,.40), transparent 60%),
+        radial-gradient(900px 520px at 60% 92%, rgba(251,191,36,.22), transparent 60%),
+        linear-gradient(180deg, #e9fbff 0%, #eafffb 100%);
+      border-radius: 28px;
+      border: 1px solid rgba(56,189,248,.18);
+      box-shadow: 0 18px 50px rgba(2,6,23,.12);
+      overflow:hidden;
+    }
+    .cta .pad{padding: 36px}
+    .cta h2{margin:0 0 10px}
+    .cta p{margin:0 0 16px; color: rgba(4,19,38,.86)}
+
+    footer{
+      text-align:center;
+      color:#6b7280;
+      padding: 30px 0 44px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 980px){
+      .hero-grid{grid-template-columns: 1fr}
+      .split{grid-template-columns: 1fr}
+      .grid2{grid-template-columns: 1fr}
+      .services-grid{grid-template-columns: 1fr}
+      .why-grid{grid-template-columns: 1fr}
+      .loc-grid{grid-template-columns: 1fr}
+      .hero h1{font-size:40px}
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO SECTION -->
+  <header class="hero" id="top">
+    <div class="wrap">
+      <div class="topbar">
+        <div class="brand">
+          <div class="logo" aria-hidden="true"></div>
+          <div>OverTop Screen</div>
+        </div>
+        <nav class="quick" aria-label="Quick links">
+          <a class="chip" href="https://overtopscreen.com/">Homepage</a>
+          <a class="chip" href="https://overtopscreen.com/contact-us/">Contact</a>
+          <a class="chip" href="https://overtopscreen.com/about-us/">About</a>
+          <a class="chip" href="https://overtopscreen.com/gallery/">Gallery</a>
+          <a class="chip" href="#services">All Services</a>
+        </nav>
+      </div>
+
+      <div class="hero-grid">
+        <div>
+          <h1>One Team for Screens, Repairs, and Outdoor Comfort</h1>
+          <p>
+            If your outdoor space feels hot, messy, or full of bugs, screens can change everything.
+            This page brings all seven OverTop Screen services into one place, with simple explanations that help you choose the right solution.
+            Some projects are new installations, like a patio or porch screen. Others are repairs, like a torn lanai screen, pool screen damage,
+            or a sliding glass door issue. No matter the job, the goal is the same: a cleaner, more comfortable space you actually want to use.
+          </p>
+          <p>
+            You will also find the five local service areas we support, plus a map for quick directions.
+            If you already know what you need, you can jump straight to the service section and click into the related page.
+          </p>
+
+          <div class="btn-row">
+            <a class="btn primary" href="https://overtopscreen.com/">Visit Our Homepage</a>
+            <a class="btn ghost" href="https://overtopscreen.com/contact-us/">Request Service</a>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <h3>What homeowners usually want</h3>
+          <div class="mini">
+            <div class="tile">
+              <strong>Less bugs</strong>
+              <span>Screening that keeps pests out and comfort in.</span>
+            </div>
+            <div class="tile">
+              <strong>Less debris</strong>
+              <span>Fewer leaves and less cleanup around outdoor areas.</span>
+            </div>
+            <div class="tile">
+              <strong>Better airflow</strong>
+              <span>Enjoy outside time without feeling boxed in.</span>
+            </div>
+            <div class="tile">
+              <strong>Clean finish</strong>
+              <span>Tight screens and neat edges that look professional.</span>
+            </div>
+          </div>
+
+          <div class="grid2" style="margin-top:2px">
+            <div class="feature" style="background:rgba(255,255,255,.06); border-color: rgba(255,255,255,.16)">
+              <strong style="color:rgba(255,255,255,.92)">Clear steps</strong>
+              <p style="color:rgba(255,255,255,.82)">Inspect, explain, complete, and confirm.</p>
+            </div>
+            <div class="feature" style="background:rgba(255,255,255,.06); border-color: rgba(255,255,255,.16)">
+              <strong style="color:rgba(255,255,255,.92)">Comfort first</strong>
+              <p style="color:rgba(255,255,255,.82)">Your space should feel easy to enjoy.</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ABOUT WEBSITE -->
+    <section>
+      <div class="wrap">
+        <div class="card">
+          <div class="pad">
+            <h2>About This Website</h2>
+            <p class="lead">
+              This website is built to help you choose the right screen service without confusion.
+              It explains what each service does, what problems it solves, and what a quality result should look like.
+            </p>
+
+            <div class="split">
+              <div>
+                <p>
+                  Many homeowners land on a screen company website after something goes wrong. A lanai screen tears. A pool screen starts sagging.
+                  A porch feels too exposed. A patio becomes too hot in the afternoon. When these problems show up, they affect daily life quickly.
+                  Bugs get in, debris collects, and outdoor time becomes less enjoyable. That is why we keep things simple here.
+                  You will find clear service pages, local pages, and an easy way to contact us.
+                </p>
+                <p>
+                  Screens also work as a comfort upgrade. A well planned screen installation can help with shade, airflow, and privacy.
+                  It can make outdoor spaces feel calmer and more usable, especially in warm weather when open air time matters.
+                  If you are comparing options, this website helps you understand what is realistic for your space and what results you can expect.
+                </p>
+                <p>
+                  The best way to use this page is to skim the service section, read the short explanations, and click the link that matches your need.
+                  If you are unsure, start with the problem you want to fix, like heat, insects, or a damaged screen panel.
+                  Then choose the service that fits that situation best.
+                </p>
+              </div>
+
+              <aside class="soft">
+                <h3>Problems we help solve</h3>
+                <ul class="list">
+                  <li><span class="dot"></span><span>Torn screens that let insects enter fast</span></li>
+                  <li><span class="dot"></span><span>Sagging panels that look wavy and messy</span></li>
+                  <li><span class="dot"></span><span>Outdoor spaces that feel too hot or too bright</span></li>
+                  <li><span class="dot"></span><span>Privacy concerns on patios and porches</span></li>
+                  <li><span class="dot"></span><span>Doors that slide poorly or do not seal well</span></li>
+                  <li><span class="dot"></span><span>Enclosures that feel less stable than they should</span></li>
+                </ul>
+              </aside>
+            </div>
+
+            <div class="grid2">
+              <div class="feature">
+                <strong>Simple and practical</strong>
+                <p>We explain what matters so you can choose the right service with confidence.</p>
+              </div>
+              <div class="feature">
+                <strong>Focused on real use</strong>
+                <p>Outdoor spaces should feel comfortable, not like extra work every day.</p>
+              </div>
+              <div class="feature">
+                <strong>Clear expectations</strong>
+                <p>You should know what the process looks like before the work starts.</p>
+              </div>
+              <div class="feature">
+                <strong>Clean finished look</strong>
+                <p>Neat screen lines and tight fit make the whole space look better.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SERVICES -->
+    <section>
+      <div class="wrap">
+        <div class="card">
+          <div class="pad">
+            <h2>About Our Services</h2>
+            <p class="lead">
+              Our services cover both new installations and repairs. Some jobs improve comfort, shade, and privacy.
+              Others restore protection after wear, storm damage, or daily use. The goal is always a clean result that holds up.
+            </p>
+
+            <div class="split">
+              <div>
+                <p>
+                  A screen service should not feel complicated. It should feel like a clear solution to a clear problem.
+                  If the issue is bugs or debris entering the pool area, the right repair brings back protection quickly.
+                  If the issue is heat and glare on a patio, the right screen installation makes the space more usable.
+                  If a sliding glass door is sticking or letting air through, a repair should restore smooth movement and better sealing.
+                </p>
+                <p>
+                  We focus on clean workmanship. That means tight screen tension, neat edges, and stable framing.
+                  It also means starting with inspection, so we understand what caused the issue.
+                  A quick patch might hide a tear, but it will not always solve the root cause.
+                  When the cause is addressed properly, the repair tends to last longer and the space feels better day to day.
+                </p>
+                <p>
+                  Below you will see all seven services. Each one is explained in a short, simple way.
+                  If the service matches your need, click the related page link to learn more.
+                </p>
+              </div>
+
+              <aside class="soft">
+                <h3>What quality work includes</h3>
+                <ul class="list">
+                  <li><span class="dot"></span><span>Inspection first, so the fix matches the real issue</span></li>
+                  <li><span class="dot"></span><span>Even tension so screens do not sag or wave</span></li>
+                  <li><span class="dot"></span><span>Neat edges that look clean and finished</span></li>
+                  <li><span class="dot"></span><span>Stable fit so doors and screens work smoothly</span></li>
+                  <li><span class="dot"></span><span>Final check to confirm performance and appearance</span></li>
+                </ul>
+              </aside>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ALL 7 SERVICES -->
+    <section id="services">
+      <div class="wrap">
+        <div class="card">
+          <div class="pad">
+            <h2>All Seven Services</h2>
+            <p class="lead">
+              Each service below is explained in about 150 words with one natural link to the related page.
+              Pick the one that matches your problem and click to explore details.
+            </p>
+
+            <div class="services-grid">
+
+              <!-- 1 Patio Screen Installation -->
+              <article class="svc">
+                <div class="badge"><span class="spark" aria-hidden="true"></span><span>Installation</span></div>
+                <h3>Patio Screen Installation</h3>
+                <p>
+                  A patio should be an easy place to relax, but sun, bugs, and wind blown debris can make it hard to use.
+                  Patio screen installation helps create a more comfortable outdoor area while still keeping the open air feel.
+                  With the right screening, you can sit outside longer without constant swatting, and the space often stays cleaner.
+                  Homeowners also like that screens can soften harsh sunlight and make afternoon time feel less intense.
+                  A good installation is not only about adding mesh. It is about neat lines, even tension, and a finished look that fits your home.
+                  When screens are installed correctly, the patio becomes more usable for meals, family time, or quiet evenings.
+                  If you want to learn more about this service, visit
+                  <a href="https://overtopscreen.com/patio-screen-installation/">patio screen installation</a>.
+                </p>
+              </article>
+
+              <!-- 2 Porch Screen Installation -->
+              <article class="svc">
+                <div class="badge"><span class="spark" aria-hidden="true"></span><span>Installation</span></div>
+                <h3>Porch Screen Installation</h3>
+                <p>
+                  A porch is often the first space guests notice, and it should feel comfortable, not exposed.
+                  Porch screen installation adds a simple layer of protection that can improve privacy and reduce insects.
+                  It can also help cut down on leaves and dust that blow into the area, which means less sweeping and less hassle.
+                  The best porch screens keep airflow moving while still creating a calmer, more controlled space.
+                  Many homeowners choose screening because they want to enjoy evenings outside without feeling crowded by bugs.
+                  A clean install matters here because the porch is a visible part of the home.
+                  Straight lines and tight fit help the space look polished.
+                  For service details, see
+                  <a href="https://overtopscreen.com/porch-screen-installation/">porch screen installation</a>.
+                </p>
+              </article>
+
+              <!-- 3 Sliding Glass Door Repair -->
+              <article class="svc">
+                <div class="badge"><span class="spark" aria-hidden="true"></span><span>Repair</span></div>
+                <h3>Sliding Glass Door Repair</h3>
+                <p>
+                  A sliding glass door should move smoothly and close with a solid seal.
+                  When it sticks, grinds, or refuses to lock properly, it becomes a daily frustration.
+                  Sliding glass door repair can restore easy movement, improve safety, and help the door seal better.
+                  In many cases, small issues like worn rollers, track buildup, or alignment problems build up over time.
+                  The result is a door that feels heavy, noisy, or uneven.
+                  A proper repair focuses on the cause, not only the symptom, so the door stays reliable after the work is done.
+                  Homeowners often notice the difference right away because the door becomes easier to use with one hand.
+                  To read more, visit
+                  <a href="https://overtopscreen.com/sliding-glass-door-repair/">sliding glass door repair</a>.
+                </p>
+              </article>
+
+              <!-- 4 Aluminum Structure and Repainting -->
+              <article class="svc">
+                <div class="badge"><span class="spark" aria-hidden="true"></span><span>Restore</span></div>
+                <h3>Aluminum Structure and Repainting</h3>
+                <p>
+                  Aluminum structures around screened areas take on a lot of weather, especially sun, moisture, and daily exposure.
+                  Over time, the frame can look faded, chalky, or worn. Aluminum structure and repainting helps restore a clean look,
+                  improve curb appeal, and protect the surface from further wear.
+                  Many homeowners choose this service when the screens are fine but the frame makes the space look older than it should.
+                  A good repainting job begins with prep because paint only lasts when the surface is handled the right way.
+                  The finished result should look smooth and consistent, not patchy.
+                  It can make the whole enclosure feel refreshed without rebuilding it.
+                  Learn more at
+                  <a href="https://overtopscreen.com/aluminum-structure-and-repainting/">aluminum structure and repainting</a>.
+                </p>
+              </article>
+
+              <!-- 5 Pool Screen Repair -->
+              <article class="svc">
+                <div class="badge"><span class="spark" aria-hidden="true"></span><span>Repair</span></div>
+                <h3>Pool Screen Repair</h3>
+                <p>
+                  Pool screen damage can change your routine fast. A small hole invites mosquitoes, and loose panels let in leaves and debris.
+                  Pool screen repair restores the barrier that keeps your pool area cleaner and more enjoyable.
+                  Many tears grow quickly because wind pulls on weak spots, so early repair is often the smartest move.
+                  Quality repair is not only about filling a gap. It is about restoring proper tension and keeping screen lines neat.
+                  When repairs are done cleanly, the enclosure looks better and performs better.
+                  Homeowners usually notice fewer bugs and less cleanup right away.
+                  If your pool space feels like more work than relaxation, this service helps bring it back.
+                  Details are available on
+                  <a href="https://overtopscreen.com/pool-screen-repair/">pool screen repair</a>.
+                </p>
+              </article>
+
+              <!-- 6 Aluminum Screen Enclosures -->
+              <article class="svc">
+                <div class="badge"><span class="spark" aria-hidden="true"></span><span>Enclosure</span></div>
+                <h3>Aluminum Screen Enclosures</h3>
+                <p>
+                  An aluminum screen enclosure helps protect outdoor spaces while keeping the open feel.
+                  It can reduce insects, cut down on debris, and make pool or patio areas easier to maintain.
+                  The structure matters because the aluminum frame supports the screen and keeps panels tight.
+                  When the frame is stable and the screening is installed evenly, the space feels more comfortable and more usable.
+                  Many homeowners like the added sense of separation because the area feels calmer and less exposed.
+                  A well built enclosure should look straight, feel secure, and blend into the home naturally.
+                  If you want to explore this option, you can read about it on the
+                  <a href="https://overtopscreen.com/aluminum-screen-enclosures/">aluminum screen enclosures</a> page.
+                </p>
+              </article>
+
+              <!-- 7 Custom Exterior Screens -->
+              <article class="svc">
+                <div class="badge"><span class="spark" aria-hidden="true"></span><span>Custom</span></div>
+                <h3>Custom Exterior Screens</h3>
+                <p>
+                  Custom exterior screens are built for homeowners who want better comfort without major changes.
+                  They can help reduce harsh sunlight, lower heat on patios, and add privacy on porches and open areas.
+                  The key is custom fit. A generic screen setup may not match your openings or your goals.
+                  With a custom approach, the screen can be planned around shade needs, visibility, and airflow.
+                  A clean finished look matters because exterior screens are seen from inside and outside.
+                  When the fit is tight and lines are straight, the home looks more polished and the space feels better daily.
+                  Learn more about options on the
+                  <a href="https://overtopscreen.com/custom-exterior-screens/">custom exterior screens</a> page.
+                </p>
+              </article>
+
+            </div>
+
+            <div class="grid2">
+              <div class="feature">
+                <strong>How to choose the right service</strong>
+                <p>Start with the problem: bugs and debris, heat and glare, privacy needs, or a door that is not working smoothly.</p>
+              </div>
+              <div class="feature">
+                <strong>What makes the biggest difference</strong>
+                <p>Proper fit, even tension, stable framing, and a clean finish that looks natural on your home.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY WE BEST -->
+    <section>
+      <div class="wrap">
+        <div class="card">
+          <div class="pad">
+            <h2>Why Homeowners Choose Us</h2>
+            <p class="lead">
+              Screens should look clean and work reliably. Homeowners want clear steps, tidy workmanship, and results that last in real weather.
+            </p>
+
+            <div class="why-grid">
+              <div class="why">
+                <strong>We start with inspection</strong>
+                <p>We look at the cause of the issue so the fix matches the real need, not only what is visible.</p>
+              </div>
+              <div class="why">
+                <strong>Neat, tight screen work</strong>
+                <p>Even tension and clean edges help the screen perform better and look better.</p>
+              </div>
+              <div class="why">
+                <strong>Comfort focused approach</strong>
+                <p>The goal is fewer bugs, less debris, and a space you actually want to use again.</p>
+              </div>
+              <div class="why">
+                <strong>Clear communication</strong>
+                <p>You should understand what is being done and why, without confusing terms.</p>
+              </div>
+              <div class="why">
+                <strong>Respect for your home</strong>
+                <p>We work carefully, keep areas clean, and treat your property like it matters.</p>
+              </div>
+              <div class="why">
+                <strong>Final check matters</strong>
+                <p>We confirm fit, finish, and performance so the result feels solid and complete.</p>
+              </div>
+            </div>
+
+            <div class="grid2" style="margin-top:18px">
+              <div class="feature">
+                <strong>Simple 3 step process</strong>
+                <p>
+                  Step 1: Inspect and explain. Step 2: Install or repair with clean details.
+                  Step 3: Confirm smooth function, tight screens, and a finished look.
+                </p>
+              </div>
+              <div class="feature">
+                <strong>What “done right” feels like</strong>
+                <p>
+                  Outdoor spaces feel calmer, screens look straight, doors move smoothly, and daily cleanup becomes easier.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATIONS -->
+    <section>
+      <div class="wrap">
+        <div class="card">
+          <div class="pad">
+            <h2>Our Service Areas</h2>
+            <p class="lead">
+              We serve five local areas across Florida. Click a city name to visit the local page on our website.
+            </p>
+
+            <div class="loc-grid">
+              <div class="loc">
+                <a href="https://overtopscreen.com/venice-fl/">Venice, FL</a>
+                <p>Screen installations and repairs that help keep outdoor spaces comfortable, clean, and easier to enjoy.</p>
+              </div>
+              <div class="loc">
+                <a href="https://overtopscreen.com/st-petersburg-fl/">St. Petersburg, FL</a>
+                <p>Reliable screen service for patios, porches, pools, and doors, built around clean workmanship.</p>
+              </div>
+              <div class="loc">
+                <a href="https://overtopscreen.com/sarasota-fl/">Sarasota, FL</a>
+                <p>Comfort focused screening solutions that reduce bugs, debris, and everyday outdoor hassle.</p>
+              </div>
+              <div class="loc">
+                <a href="https://overtopscreen.com/palmetto-fl/">Palmetto, FL</a>
+                <p>Professional screen repairs and installations designed to hold up and look clean on your home.</p>
+              </div>
+              <div class="loc">
+                <strong>Nearby Service Areas</strong>
+                <p>We also serve nearby communities. If your city is not listed, contact us and ask about coverage.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAP -->
+    <section>
+      <div class="wrap">
+        <div class="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3129.0193693129095!2d-82.62084!3d27.495525699999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c3171dfb2bbfc7%3A0xed60df2b9085c141!2s6313%20Manatee%20Ave%20W%2C%20Bradenton%2C%20FL%2034209%2C%20USA!5e1!3m2!1sen!2s!4v1766990430175!5m2!1sen!2s"
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section>
+      <div class="wrap">
+        <div class="cta">
+          <div class="pad">
+            <h2>Ready to Fix the Screen Problem That Is Annoying You Every Day?</h2>
+            <p>
+              Whether you need a new screen installation or a repair, the right solution should feel simple.
+              Tell us what is happening, and we will guide you to the service that fits your space best.
+              You can start on our homepage to explore, or go straight to contact to request service today.
+            </p>
+            <div class="btn-row">
+              <a class="btn primary" href="https://overtopscreen.com/contact-us/">Request Service</a>
+              <a class="btn ghost" href="https://overtopscreen.com/">Homepage</a>
+            </div>
+            <p style="margin-top:16px; color: rgba(4,19,38,.78); font-size:14px">
+              Want examples first? Visit the gallery, then reach out with a quick description of your project.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div>© 2026 All rights reserved</div>
+    </div>
+  </footer>
+
+</body>
+</html>
